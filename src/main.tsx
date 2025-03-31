@@ -5,7 +5,7 @@ import './index.css'
 import { ThemeProvider } from 'styled-components'
 import ResetStyles from '@/styles/reset'
 import theme from '@/styles/theme'
-import App from './App.tsx'
+import App from '@/App.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
