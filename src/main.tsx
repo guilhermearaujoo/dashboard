@@ -3,8 +3,8 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 
 import { ThemeProvider } from 'styled-components'
-import ResetStyles from '@/styles/reset'
-import theme from '@/styles/theme'
+import ResetStyles from '@/main/config/styles/reset'
+import theme from '@/main/config/styles/theme'
 import App from '@/App.tsx'
 
 createRoot(document.getElementById('root')!).render(

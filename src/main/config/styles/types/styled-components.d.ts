@@ -1,4 +1,4 @@
-import theme from '@/styles/theme'
+import theme from '@/main/config/styles/theme'
 
 type Theme = typeof theme
 
