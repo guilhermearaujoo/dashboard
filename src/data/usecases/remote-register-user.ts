@@ -18,6 +18,8 @@ export class RemoteRegisterUser implements RegisterUser {
     switch (httpResponse.statusCode) {
       case HttpStatusCode.ok:
         return { ...httpResponse.body, status: 'REVIEW' }
+      case HttpStatusCode.created:
+        return { ...httpResponse.body, status: 'REVIEW' }
       default:
         throw new UnexpectedError()
     }

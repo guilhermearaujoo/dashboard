@@ -1,5 +1,5 @@
 // DUCKS pattern
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 export interface CounterState {
   value: number
@@ -16,9 +16,12 @@ const counterSlice = createSlice({
     incremented(state) {
       // its ok to do this because immer makes it imutable under the hood
       state.value++
+    },
+    amountAdded(state, action: PayloadAction<number>) {
+      state.value += action.payload
     }
   }
 })
 
-export const { incremented } = counterSlice.actions
+export const { incremented, amountAdded } = counterSlice.actions
 export default counterSlice.reducer
